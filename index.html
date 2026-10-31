@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ember & Spice | Modern Dining</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <span>EMBER</span>
+                <small>& SPICE</small>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#story">Our Story</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#reservation" class="nav-btn">
+                Reserve a Table
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">FINE DINING • EST. 2018</p>
+
+                <h1>
+                    Where Fire<br>
+                    Meets <span>Flavor.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A modern dining experience crafted around bold flavors,
+                    honest ingredients and the art of fire.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#menu" class="btn btn-primary">
+                        Explore Menu
+                    </a>
+
+                    <a href="#reservation" class="btn btn-outline">
+                        Reserve a Table
+                    </a>
+
+                </div>
+
+                <div class="hero-location">
+                    <span>✦</span>
+                    Downtown • Open Tuesday — Sunday
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+                <span></span>
+                Scroll to explore
+            </div>
+
+        </section>
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section class="intro section">
+
+            <div class="section-label">
+                <span>01</span>
+                THE EXPERIENCE
+            </div>
+
+            <div class="intro-grid">
+
+                <div>
+                    <h2>
+                        Crafted with fire.<br>
+                        Served with <em>passion.</em>
+                    </h2>
+                </div>
+
+                <div class="intro-text">
+
+                    <p>
+                        At Ember & Spice, every plate tells a story.
+                        We combine seasonal ingredients, traditional
+                        techniques and modern creativity to create
+                        unforgettable dining experiences.
+                    </p>
+
+                    <a href="#story" class="text-link">
+                        Discover our story →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SIGNATURE MENU ================= -->
+
+        <section class="menu-section section" id="menu">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    <span>02</span>
+                    FROM OUR KITCHEN
+                </div>
+
+                <h2>Signature <em>Dishes</em></h2>
+
+                <p>
+                    Our chef's selection of unforgettable flavors.
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+                <article class="dish-card">
+
+                    <div class="dish-image dish-one">
+                        <span class="dish-tag">Chef's Pick</span>
+                    </div>
+
+                    <div class="dish-info">
+
+                        <div>
+                            <h3>Ember Grilled Steak</h3>
+                            <p>
+                                Charred vegetables, smoked jus,
+                                rosemary butter.
+                            </p>
+                        </div>
+
+                        <span class="price">₹1,290</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="dish-card">
+
+                    <div class="dish-image dish-two">
+                        <span class="dish-tag">Signature</span>
+                    </div>
+
+                    <div class="dish-info">
+
+                        <div>
+                            <h3>Truffle Pasta</h3>
+                            <p>
+                                Handmade pasta, wild mushrooms,
+                                parmesan cream.
+                            </p>
+                        </div>
+
+                        <span class="price">₹790</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="dish-card">
+
+                    <div class="dish-image dish-three">
+                        <span class="dish-tag">Popular</span>
+                    </div>
+
+                    <div class="dish-info">
+
+                        <div>
+                            <h3>Fire Roasted Salmon</h3>
+                            <p>
+                                Lemon herb butter, roasted greens,
+                                crispy potatoes.
+                            </p>
+                        </div>
+
+                        <span class="price">₹950</span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="center-button">
+
+                <a href="#" class="btn btn-outline dark-btn">
+                    View Full Menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STORY ================= -->
+
+        <section class="story section" id="story">
+
+            <div class="story-image"></div>
+
+            <div class="story-content">
+
+                <div class="section-label">
+                    <span>03</span>
+                    OUR STORY
+                </div>
+
+                <h2>
+                    Born from a love<br>
+                    for <em>great food.</em>
+                </h2>
+
+                <p>
+                    What started as a small kitchen and a big dream
+                    has grown into a destination for people who believe
+                    food should be more than just a meal.
+                </p>
+
+                <p>
+                    Our philosophy is simple: respect the ingredient,
+                    master the fire and let the flavor speak for itself.
+                </p>
+
+                <a href="#" class="text-link">
+                    Meet our chef →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALLERY ================= -->
+
+        <section class="gallery section" id="gallery">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    <span>04</span>
+                    A TASTE OF EMBER
+                </div>
+
+                <h2>Inside the <em>experience.</em></h2>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item gallery-one"></div>
+                <div class="gallery-item gallery-two"></div>
+                <div class="gallery-item gallery-three"></div>
+                <div class="gallery-item gallery-four"></div>
+                <div class="gallery-item gallery-five"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TESTIMONIAL ================= -->
+
+        <section class="testimonial section">
+
+            <div class="quote-mark">“</div>
+
+            <blockquote>
+                One of the best dining experiences we've had.
+                The food, atmosphere and attention to detail
+                were absolutely exceptional.
+            </blockquote>
+
+            <div class="review-author">
+                <span></span>
+                <p>AMELIA R. <small>• VERIFIED GUEST</small></p>
+                <span></span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESERVATION ================= -->
+
+        <section class="reservation section" id="reservation">
+
+            <div class="reservation-content">
+
+                <div class="section-label">
+                    <span>05</span>
+                    YOUR TABLE AWAITS
+                </div>
+
+                <h2>
+                    Make tonight<br>
+                    <em>memorable.</em>
+                </h2>
+
+                <p>
+                    Join us for an evening of exceptional food,
+                    warm hospitality and unforgettable moments.
+                </p>
+
+                <a href="tel:+919876543210" class="btn btn-primary">
+                    Reserve Your Table
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="contact section" id="contact">
+
+            <div class="contact-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        <span>06</span>
+                        FIND US
+                    </div>
+
+                    <h2>
+                        Come say<br>
+                        <em>hello.</em>
+                    </h2>
+
+                </div>
+
+
+                <div class="contact-details">
+
+                    <div class="contact-item">
+                        <span>ADDRESS</span>
+                        <p>
+                            24 Ember Street,<br>
+                            Downtown, Kerala, India
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>OPENING HOURS</span>
+                        <p>
+                            Tuesday — Sunday<br>
+                            12:00 PM — 11:00 PM
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>CONTACT</span>
+                        <p>
+                            +91 9746059864<br>
+                            hello@emberandspice.com
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-top">
+
+            <div class="footer-logo">
+                EMBER <span>& SPICE</span>
+            </div>
+
+            <p>
+                Modern dining. Bold flavors.
+            </p>
+
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Ember & Spice. All rights reserved.</p>
+            <p>Designed & developed by <strong>Firoz Labba</strong></p>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

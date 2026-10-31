@@ -1,0 +1,447 @@
+/* =========================================================
+   EMBER & SPICE — PREMIUM ANIMATION LAYER
+   ========================================================= */
+
+
+/* ================= SCROLL PROGRESS ================= */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #d6a75c;
+
+    z-index: 99999;
+    pointer-events: none;
+}
+
+
+/* ================= SCROLL REVEAL ================= */
+
+.reveal-hidden {
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.22, 1, .36, 1);
+}
+
+.reveal-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ================= IMAGE REVEAL ================= */
+
+.image-reveal {
+    opacity: 0;
+
+    transform: scale(1.04);
+
+    transition:
+        opacity 1s ease,
+        transform 1.2s cubic-bezier(.22, 1, .36, 1);
+}
+
+.image-loaded {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* ================= DISH CARD ================= */
+
+.dish-card {
+    transform-style: preserve-3d;
+
+    will-change: transform;
+
+    transition:
+        transform 0.45s cubic-bezier(.22, 1, .36, 1),
+        box-shadow 0.45s ease;
+}
+
+.dish-card:hover {
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img,
+.dish-card img {
+    will-change: transform;
+
+    transition:
+        transform 0.8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.gallery-item:hover img,
+.dish-card:hover img {
+    transform: scale(1.07);
+}
+
+
+/* ================= BUTTON EFFECT ================= */
+
+.btn {
+    position: relative;
+
+    overflow: hidden;
+
+    will-change: transform;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn::before {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    left: var(--mouse-x, 50%);
+    top: var(--mouse-y, 50%);
+
+    transform:
+        translate(-50%, -50%);
+
+    transition:
+        width 0.5s ease,
+        height 0.5s ease;
+
+    pointer-events: none;
+}
+
+.btn:hover::before {
+    width: 280px;
+    height: 280px;
+}
+
+.button-clicked {
+    transform: scale(0.96) !important;
+}
+
+
+/* ================= NAVBAR SCROLL ================= */
+
+.navbar.scrolled {
+    background:
+        rgba(10, 10, 10, 0.88);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+/* ================= ACTIVE NAV ================= */
+
+.nav-links a.active-link {
+    color: #d6a75c !important;
+}
+
+
+/* =========================================================
+   CURSOR — SOFT WARM LIGHT
+   Screenshot-inspired
+   ========================================================= */
+
+.cursor-glow {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 160px;
+    height: 160px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 99990;
+
+    /*
+       The light is strongest exactly
+       underneath the mouse pointer.
+    */
+    background:
+        radial-gradient(
+            circle at center,
+
+            rgba(255, 194, 92, 0.22) 0%,
+
+            rgba(235, 170, 78, 0.17) 12%,
+
+            rgba(214, 167, 92, 0.11) 25%,
+
+            rgba(214, 167, 92, 0.065) 40%,
+
+            rgba(214, 167, 92, 0.028) 55%,
+
+            rgba(214, 167, 92, 0.008) 68%,
+
+            transparent 78%
+        );
+
+    transform:
+        translate3d(-50%, -50%, 0);
+
+    will-change:
+        left,
+        top;
+
+    /*
+       Very soft photographic light.
+       No visible edge / circle.
+    */
+    filter:
+        blur(8px);
+
+    opacity: 0.95;
+}
+
+
+/* ================= NO CUSTOM CURSOR DOT ================= */
+
+.cursor-dot {
+    display: none !important;
+}
+
+
+/* ================= NO CURSOR RING ================= */
+
+.cursor-glow::before,
+.cursor-glow::after {
+    display: none !important;
+    content: none !important;
+}
+
+
+/* ================= PARTICLES ================= */
+
+.particle-container {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+.particle {
+    position: absolute;
+
+    bottom: -10px;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(214, 167, 92, 0.35);
+
+    box-shadow:
+        0 0 7px rgba(214, 167, 92, 0.35);
+
+    animation:
+        emberFloat linear infinite;
+}
+
+@keyframes emberFloat {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(0.4);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.7;
+    }
+
+    50% {
+        transform:
+            translate3d(25px, -50vh, 0)
+            scale(1);
+    }
+
+    80% {
+        opacity: 0.35;
+    }
+
+    100% {
+        transform:
+            translate3d(-20px, -110vh, 0)
+            scale(0.2);
+
+        opacity: 0;
+    }
+}
+
+
+/* ================= SCROLL TOP ================= */
+
+.scroll-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(214, 167, 92, 0.6);
+
+    background:
+        rgba(15, 15, 15, 0.9);
+
+    color: #d6a75c;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 9998;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        transform 0.35s ease,
+        background 0.3s ease;
+}
+
+.scroll-top.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+.scroll-top:hover {
+    background: #d6a75c;
+
+    color: #111;
+
+    transform:
+        translateY(-5px);
+}
+
+
+/* ================= TESTIMONIAL ================= */
+
+.testimonial {
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.testimonial:hover {
+    transform:
+        translateY(-7px);
+}
+
+
+/* ================= HERO IMAGE ================= */
+
+.hero-image {
+    will-change: transform;
+}
+
+
+/* =========================================================
+   DESKTOP CURSOR ONLY
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .cursor-glow,
+    .cursor-dot {
+        display: none !important;
+    }
+
+    .particle-container {
+        display: none !important;
+    }
+
+    .dish-card {
+        transform: none !important;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .scroll-top {
+        width: 42px;
+        height: 42px;
+
+        right: 18px;
+        bottom: 18px;
+    }
+}
+
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cursor-glow,
+    .cursor-dot,
+    .particle-container {
+        display: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
